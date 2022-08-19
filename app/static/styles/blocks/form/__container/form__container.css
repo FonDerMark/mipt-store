@@ -1,0 +1,12 @@
+.form__container{
+    width: 350px;
+    margin: 0 auto;
+    padding: 10px 0;
+    /*border: none;*/
+    border: 0.4px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba(229, 221, 221, 0.55);
+}

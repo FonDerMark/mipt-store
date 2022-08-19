@@ -1,0 +1,11 @@
+.header__links{
+    margin: 0;
+    padding: 10px 30px 10px 0;
+    text-align: end;
+    list-style-type: none;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 10px 20px;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+}

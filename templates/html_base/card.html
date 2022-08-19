@@ -1,0 +1,24 @@
+{% extends 'html_base/base.html' %}
+{% load static %}
+{% block main %}
+  {% for order in orders %}
+    <div class="orders">
+      <div class="orders__main">
+        <img src="{% static order.photo_path %}" alt="_" class="orders__img">
+        <div class="orders__div">
+          <span class="orders__product">{{ order.product }}</span>
+          <div>
+            <span class="orders__brand">{{ order.brand }}</span>
+            <span class="orders__model">{{ order.model }}</span>
+          </div>
+        </div>
+      </div>
+      <form method="post" class="orders__form">
+        {% csrf_token %}
+        <input type="hidden" value="{{ order.articl }}" name="art">
+        <button type="submit" class="orders__button">удалить</button>
+      </form>
+    </div>
+  {% endfor %}
+  <a href="#" class="orders__link"><button class="card__button card__button_accept">Оформить заказ</button></a>
+{% endblock %}

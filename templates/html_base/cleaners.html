@@ -1,0 +1,40 @@
+{% extends 'html_base/index.html' %}
+{% load static %}
+{% block products %}
+
+<section class="cards">
+
+  {% for cl in cleaner %}
+    <article class="card">
+      <img src="{% static cl.photo_path %}" class="card__image">
+      <h2 class="card__title">{{ cl.brand }} {{ cl.model }}</h2>
+      <div class="card__description">
+        <p class="card__key">Мощность: </p>
+        <p class="card__value">{{ cl.power }}</p>
+      </div>
+      <div class="card__description">
+        <p class="card__key">Программы: </p>
+        <p class="card__value">{{ cl.num_of_programms }}</p>
+      </div>
+      <div class="card__description">
+        <p class="card__key">Объём: </p>
+        <p class="card__value">{{ cl.volume }}</p>
+      </div>
+      <div class="card__description">
+        <p class="card__key">Цена: </p>
+        <p class="card__value">{{ cl.price }}</p>
+      </div>
+      {% if cl.articl in orders %}
+        <div class="card__form"><a href="{% url 'card' %}"><button class="card__button card__button_already">В корзине</button></a></div>
+      {% else %}
+        <form method="post" class="card__form">
+          <input type="hidden" value="{{ cl.articl }}" name="article">
+          <button type="submit" class="card__button">Добавить в корзину</button>
+        </form>
+      {% endif %}
+    </article>
+  {% endfor %}
+
+</section>
+
+{% endblock %}

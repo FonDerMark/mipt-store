@@ -1,0 +1,17 @@
+.card__button{
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(#120fc8, #b303c8);
+    padding: 0;
+    width: 280px;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: "Book Antiqua", sans-serif;
+}
+
+.card__button:hover{
+    box-shadow: 2px 2px 4px rgba(92, 91, 91, 0.45);
+}

@@ -1,0 +1,15 @@
+{% extends 'html_base/base.html' %}
+{% block main %}
+    <div class="form">
+      <form method="post" class="form__container">
+        {% csrf_token %}
+        <h1 class="form__title">Регистрация</h1>
+        <p>{{ error }}</p>
+        <label for="id_username">Имя:</label>
+        <input type="text" name="username" id="id_username" required>
+        <label for="id_password">Пароль:</label>
+        <input type="password" name="password" id="id_password" required>
+        <button class="form__button-submit" type="submit">Отправить</button>
+      </form>
+    </div>
+{% endblock %}

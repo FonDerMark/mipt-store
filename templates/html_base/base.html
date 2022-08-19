@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+</head>
+<body class="page">
+
+{% block header %}
+    <header class="header">
+        <nav class="header__navbar">
+            <a href="{% url 'index' %}" class="header__logo">MIPT-STORE</a>
+            <div>
+              <ul class="header__links">
+              {% if user.is_authenticated %}
+                <li><p class="header__text">Добро пожаловать, {{ user.username }}!</p></li>
+                <li><a href="{% url 'logout' %}" class="header__link"><button class="header__button">Выйти</button></a></li>
+              {% else %}
+                <li><a href="{% url 'login' %}"><button class="header__button">Войти</button></a></li>
+                <li><a href="{% url 'register' %}"><button class="header__button">Регистрация</button></a></li>
+              {% endif %}
+                <li><a href="{% url 'card' %}" class="header__link">Корзина</a></li>
+                <li><a  class="header__link">Профиль</a></li>
+              </ul>
+            </div>
+        </nav>
+    </header>
+
+{% endblock %}
+
+{% block main %}
+
+{% endblock %}
+    <footer class="footer" {{ hidden }}>
+        <nav class="footer__navbar">
+            <ul class="footer__links">
+                <li><a href="#" class="footer__link">Контакты</a></li>
+                <li><a href="#" class="footer__link">Обратная связь</a></li>
+                <li><a href="#" class="footer__link">Вакансии</a></li>
+                <li><a href="#" class="footer__link">О нас</a></li>
+                {% if debug %}
+                  <li><a href="/admin" class="footer__link">Админ</a></li>
+                {% endif %}
+            </ul>
+            <p class="footer__info"><span class="footer__text-bold">tel: </span>+7 (111)111-11-11</p>
+            <p class="footer__info"><span class="footer__text-bold">e-mail: </span>mipt-store@info.com</p>
+        </nav>
+    </footer>
+{% block footer %}
+
+{% endblock %}
+
+</body>
+</html>

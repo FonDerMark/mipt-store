@@ -1,0 +1,42 @@
+{% extends 'html_base/index.html' %}
+{% load static %}
+{% block products %}
+
+<section class="cards">
+
+  {% for t in tv %}
+    <article class="card">
+      <img src="{% static t.photo_path %}" class="card__image">
+      <h2 class="card__title">{{ t.brand }} {{ t.model }}</h2>
+      <div class="card__description">
+        <p class="card__key">Диагональ экрана: </p>
+        <p class="card__value">{{ t.diag }}</p>
+      </div>
+      {% if t.smart == False %}
+        <div class="card__description">
+          <p class="card__key">Смарт-функции: </p>
+          <p class="card__value">Нет</p>
+        </div>
+      {% else %}
+        <div class="card__description">
+          <p class="card__key">Смарт-функции: </p>
+          <p class="card__value">Да</p>
+        </div>
+      {% endif %}
+      <div class="card__description">
+        <p class="card__key">Цена: </p>
+        <p class="card__value">{{ t.price }}</p>
+      </div>
+      {% if t.articl in orders %}
+        <div class="card__form"><a href="{% url 'card' %}"><button class="card__button card__button_already">В корзине</button></a></div>
+      {% else %}
+        <form method="post" class="card__form">
+          <input type="hidden" value="{{ t.articl }}" name="article">
+          <button type="submit" class="card__button">Добавить в корзину</button>
+        </form>
+      {% endif %}
+    </article>
+  {% endfor %}
+
+</section>
+{% endblock %}

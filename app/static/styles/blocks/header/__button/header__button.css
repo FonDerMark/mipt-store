@@ -1,0 +1,20 @@
+.header__button{
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    height: 25px;
+    border: none;
+    text-align: center;
+    background: linear-gradient(#7e36e5, #0cd5e7);
+    /*background: linear-gradient(#ead533, #ea791b);*/
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Book Antiqua', sans-serif;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.header__button:hover{
+    box-shadow: 2px 2px 3px rgba(175, 175, 175, 0.6);
+}

@@ -1,0 +1,8 @@
+.card__image{
+    width: 380px;
+    height: 300px;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-sizing: content-box;
+}

@@ -1,0 +1,10 @@
+.orders__link{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 550px;
+    list-style-type: none;
+    text-decoration: none;
+}

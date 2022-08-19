@@ -1,0 +1,43 @@
+{% extends 'html_base/index.html' %}
+{% load static %}
+{% block products %}
+
+<section class="cards">
+
+  {% for sp in smartphone %}
+    <article class="card">
+      <img src="{% static sp.photo_path %}" class="card__image">
+      <h2 class="card__title">{{ sp.brand }} {{ sp.model }}</h2>
+      <div class="card__description">
+        <p class="card__key">Диагональ экрана: </p>
+        <p class="card__value">{{ sp.diag }}</p>
+      </div>
+      <div class="card__description">
+        <p class="card__key">Процессор: </p>
+        <p class="card__value">{{ sp.processor }}</p>
+      </div>
+      <div class="card__description">
+        <p class="card__key">Оперативная память: </p>
+        <p class="card__value">{{ sp.memory }}</p>
+      </div>
+      <div class="card__description">
+        <p class="card__key">Объём диска: </p>
+        <p class="card__value">{{ sp.disk_volume }}</p>
+      </div>
+      <div class="card__description">
+        <p class="card__key">Цена: </p>
+        <p class="card__value">{{ sp.price }}</p>
+      </div>
+      {% if sp.articl in orders %}
+        <div class="card__form"><a href="{% url 'card' %}"><button class="card__button card__button_already">В корзине</button></a></div>
+      {% else %}
+        <form method="post" class="card__form">
+          <input type="hidden" value="{{ sb.articl }}" name="article">
+          <button type="submit" class="card__button">Добавить в корзину</button>
+        </form>
+      {% endif %}
+    </article>
+  {% endfor %}
+
+</section>
+{% endblock %}

@@ -1,0 +1,51 @@
+@import url(./blocks/page/page.css);
+
+@import url(./blocks/header/header.css);
+@import url(./blocks/header/__navbar/header__navbar.css);
+@import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__links/header__links.css);
+@import url(./blocks/header/__link/header__link.css);
+@import url(./blocks/header/__button/header__button.css);
+@import url(./blocks/header/__text/header__text.css);
+
+@import url(./blocks/content/content.css);
+@import url(./blocks/products/products.css);
+@import url(./blocks/products/__navbar/products__navbar.css);
+@import url(./blocks/products/__button/products__button.css);
+
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/footer/__navbar/footer__navbar.css);
+@import url(./blocks/footer/__links/footer__links.css);
+@import url(./blocks/footer/__link/footer__link.css);
+@import url(./blocks/footer/__info/footer__info.css);
+@import url(./blocks/footer/__text-bold/footer__text-bold.css);
+
+@import url(./blocks/form/form.css);
+@import url(./blocks/form/__container/form__container.css);
+@import url(./blocks/form/__title/form__title.css);
+@import url(./blocks/form/__button-submit/form__button-submit.css);
+@import url(./blocks/form/__input/form__input.css);
+@import url(./blocks/form/__error/form__error.css);
+
+@import url(./blocks/cards/cards.css);
+@import url(./blocks/card/card.css);
+@import url(./blocks/card/__title/card__title.css);
+@import url(./blocks/card/__image/card__image.css);
+@import url(./blocks/card/__description/card__description.css);
+@import url(./blocks/card/__key/card__key.css);
+@import url(./blocks/card/__value/card__value.css);
+@import url(./blocks/card/__button/card__button.css);
+@import url(./blocks/card/__form/card__form.css);
+@import url(./blocks/card/__button/_already/card__button_already.css);
+@import url(./blocks/card/__button/_accept/card__button_accept.css);
+
+@import url(./blocks/orders/orders.css);
+@import url(./blocks/orders/__img/orders__img.css);
+@import url(./blocks/orders/__form/orders__form.css);
+@import url(./blocks/orders/__button/orders__button.css);
+@import url(./blocks/orders/__div/orders__div.css);
+@import url(./blocks/orders/__product/orders__product.css);
+@import url(./blocks/orders/__brand/orders__brand.css);
+@import url(./blocks/orders/__model/orders__model.css);
+@import url(./blocks/orders/__main/orders__main.css);
+@import url(./blocks/orders/__link/orders__link.css);

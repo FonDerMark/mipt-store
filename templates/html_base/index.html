@@ -1,0 +1,15 @@
+{% extends 'html_base/base.html' %}
+{% block main %}
+    <main class="content">
+        <section class="products">
+            <nav class="products__navbar">
+                <a href="{% url 'index' %}"><button type="button" class="products__button">Ноутбуки</button></a>
+                <a href="{% url 'smartphones' %}"><button type="button" class="products__button">Смартфоны</button></a>
+                <a href="{% url 'tvs' %}"><button type="button" class="products__button">Телевизоры</button></a>
+                <a href="{% url 'cls' %}"><button type="button" class="products__button">Техника</button></a>
+            </nav>
+        </section>
+    {% block products %}
+    {% endblock %}
+    </main>
+{% endblock %}
